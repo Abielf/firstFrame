@@ -101,7 +101,7 @@ public class FirstFrame implements ActionListener{
         label.setText("Number of Clicks: "+count);
         String user=fieldUser.getText();
         String password= fieldPass.getText();
-        if(user.equals("Abe")&&password.equals("Cuntbus")){
+        if(user.equals("Abe")&&password.equals("Password123!")){
             success.setText("You're in!");
         }
     }
