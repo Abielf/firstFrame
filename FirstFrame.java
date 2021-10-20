@@ -6,7 +6,7 @@ import javax.swing.JLabel;
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import java.awt.event.*;
-
+import java.util.Arrays;
 import java.awt.BorderLayout;
 
 public class FirstFrame implements ActionListener{
@@ -100,8 +100,9 @@ public class FirstFrame implements ActionListener{
         count++;
         label.setText("Number of Clicks: "+count);
         String user=fieldUser.getText();
-        String password= fieldPass.getText();
-        if(user.equals("Abe")&&password.equals("Password123!")){
+        char[] password= fieldPass.getPassword();
+        char[] realPassword = {'H','e','l','l','o'};
+        if(user.equals("Abe")&&Arrays.equals(password,realPassword)){
             success.setText("You're in!");
         }
     }
